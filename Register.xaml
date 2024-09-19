@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="MovieBookingApp.Register"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MovieBookingApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+       Background="#1E1E1E">
+
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/background_image.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Button Content="Sign Up" Margin="658,376,0,0" VerticalAlignment="Top" Background="#FF444444" Foreground="White" Click="Button_Click_2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="475,284,0,0" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="475,328,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:Name="tbName" HorizontalAlignment="Center" Margin="0,239,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="173" Background="#333333" Foreground="White"/>
+        <TextBox x:Name="tbEmail" HorizontalAlignment="Center" Margin="0,284,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="173" Background="#333333" Foreground="White"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="475,378,0,0" TextWrapping="Wrap" Text="back" VerticalAlignment="Top"  Foreground="White" Tapped="TextBlock_SelectionChanged"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="475,246,0,0" TextWrapping="Wrap" Text="Name:" VerticalAlignment="Top"  Foreground="White"/>
+
+        <TextBox x:Name="tbPass" HorizontalAlignment="Center" Margin="0,328,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="173" Background="#333333" Foreground="White" TextChanged="tbPass_TextChanged"/>
+
+        <TextBlock HorizontalAlignment="Center" Margin="0,39,0,0" TextWrapping="Wrap" Text="Sign Up" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="White"/>
+
+
+    </Grid>
+</Page>

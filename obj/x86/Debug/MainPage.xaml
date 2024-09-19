@@ -1,0 +1,114 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="MovieBookingApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MovieBookingApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    MinWidth="1280" MaxWidth="1280" MinHeight="720" MaxHeight="720">
+
+
+    <Grid x:ConnectionId='2' x:Name="MainGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/background_image.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <StackPanel x:ConnectionId='3' x:Name="DatePickerStackPanel" Margin="103,105,708,0" VerticalAlignment="Top">
+            <TextBlock x:ConnectionId='53' x:Name="DatePickerTextblock" Text="Select a Date" FontSize="20" Margin="0,0,0,5" Foreground="Gray"/>
+            <DatePicker x:ConnectionId='54' x:Name="datePicker" Height="39" Width="448"                                     />
+        </StackPanel>
+        <AppBarButton Height="29" Label="AppBarButton" Margin="1198,25,0,0" Width="53" Icon="Contact" Content="Login" Visibility="Collapsed"/>
+        <TextBlock x:ConnectionId='4' x:Name="TicketTitleTextblock" Foreground="#FFD700" HorizontalAlignment="Left" Height="33" Margin="57,557,0,0" TextWrapping="Wrap" Text="My Tickets" VerticalAlignment="Top" Width="138" FontSize="24"/>
+        <TextBlock x:ConnectionId='5' x:Name="TitleTextBlock"  Foreground="#FFD700" HorizontalAlignment="Left" Height="96" Margin="441,10,0,0" TextWrapping="Wrap" Text="Movie Booking" VerticalAlignment="Top" Width="405" FontWeight="Bold" FontSize="55" />
+
+        <Grid x:ConnectionId='6' x:Name="MovieViewGrid" Margin="71,183,9,162" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Width="1200" CanBeScrollAnchor="True" Visibility="Collapsed">
+            <Grid.RenderTransform>
+                <CompositeTransform Rotation="0.086"/>
+            </Grid.RenderTransform>
+            <Grid x:ConnectionId='15' x:Name="MovieGrid1" HorizontalAlignment="Left" Height="379" Margin="2,1,0,0" VerticalAlignment="Top" Width="359">
+                <Image x:ConnectionId='42' x:Name="SamplePoster1" Source="Assets/moiveplaceholder.jpg" HorizontalAlignment="Left" Height="214" Margin="10,32,0,0" VerticalAlignment="Top" Width="196"/>
+                <ComboBox x:ConnectionId='43' x:Name="showtimesComboBox1" Height="32" Margin="213,56,0,0" Width="142"                                                      />
+                <TextBlock x:ConnectionId='44' x:Name="MovieTitleLabel" HorizontalAlignment="Left" Margin="70,8,0,0" TextWrapping="Wrap" Text="Movie 1" VerticalAlignment="Top" FontWeight="Bold"/>
+                <TextBlock x:ConnectionId='45' x:Name="AmountOfTicketsTextbox" HorizontalAlignment="Left" Height="24" Margin="214,93,0,0" TextWrapping="Wrap" Text="Amount of Tickets" VerticalAlignment="Top" Width="129"/>
+                <TextBlock x:ConnectionId='46' x:Name="ShowttimeLabel1" HorizontalAlignment="Left" Height="24" Margin="214,32,0,0" TextWrapping="Wrap" Text="Showtimes" VerticalAlignment="Top" Width="129"/>
+                <TextBlock x:ConnectionId='47' x:Name="SampleText1" HorizontalAlignment="Left" Margin="9,251,0,0" TextWrapping="Wrap" Text="Movie Sample Text - Lorem ipsum dolor sit amet. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" VerticalAlignment="Top" Height="123" Width="319"/>
+                <TextBlock HorizontalAlignment="Left" Height="19" Margin="214,142,0,0" TextWrapping="Wrap" Text="*8 Ticket Max Per Reservation" VerticalAlignment="Top" Width="120" FontStyle="Italic" FontSize="6"/>
+
+                <!-- Slider and associated elements -->
+                <Grid x:ConnectionId='48' x:Name="Slider1Grid" Margin="214,115,0,0">
+                    <Slider x:ConnectionId='50' x:Name="slider1" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="107"
+        Minimum="1" Maximum="8" StepFrequency="1" Margin="0,-6,0,0"/>
+                    <TextBlock x:ConnectionId='51'                                            HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,6,4,0"/>
+                    <Button x:ConnectionId='52' x:Name="ReserveButton1" Content="Reserve" Height="32" Margin="0,91,0,0" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.345,1.276" HorizontalAlignment="Center"                             />
+                </Grid>
+
+                <TextBlock HorizontalAlignment="Left" Height="24" Margin="211,150,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="129"/>
+                <TextBox x:ConnectionId='49' x:Name="EmailTextbox1" HorizontalAlignment="Left" Height="31" Margin="211,169,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="142" PlaceholderText="Enter Email"/>
+            </Grid>
+            <Grid x:ConnectionId='16' x:Name="MovieGrid2" HorizontalAlignment="Left" Height="379" Margin="411,-1,0,0" VerticalAlignment="Top" Width="353">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="349*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <Image x:ConnectionId='31' x:Name="SamplePoster2" Source="/Assets/movieplaceholder2.jpg" HorizontalAlignment="Left" Height="214" Margin="10,32,0,0" VerticalAlignment="Top" Width="196"/>
+                <ComboBox x:ConnectionId='32' x:Name="showtimesComboBox2" Height="32" Margin="211,56,0,0" Width="142"                                                       Grid.ColumnSpan="2"/>
+                <TextBlock x:ConnectionId='33' x:Name="MovieTitle2" HorizontalAlignment="Left" Margin="70,8,0,0" TextWrapping="Wrap" Text="Movie 2" VerticalAlignment="Top" FontWeight="Bold" Height="19" Width="64"/>
+                <TextBlock x:ConnectionId='34' x:Name="AmountOfTicketsTextbox2" HorizontalAlignment="Left" Height="24" Margin="214,93,0,0" TextWrapping="Wrap" Text="Amount of Tickets" VerticalAlignment="Top" Width="129"/>
+                <TextBlock x:ConnectionId='35' x:Name="ShowtimesLabel2" HorizontalAlignment="Left" Height="24" Margin="214,32,0,0" TextWrapping="Wrap" Text="Showtimes" VerticalAlignment="Top" Width="129"/>
+                <TextBlock x:ConnectionId='36' x:Name="SampleText2" HorizontalAlignment="Left" Margin="9,251,0,0" TextWrapping="Wrap" Text="Movie Sample Text - Lorem ipsum dolor sit amet. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" VerticalAlignment="Top" Height="126" Width="319"/>
+                <TextBlock HorizontalAlignment="Left" Height="19" Margin="214,142,0,0" TextWrapping="Wrap" Text="*8 Ticket Max Per Reservation" VerticalAlignment="Top" Width="120" FontStyle="Italic" FontSize="6"/>
+
+                <!-- Slider and associated elements -->
+                <Grid x:ConnectionId='37' x:Name="Slider2Grid" Margin="214,115,0,0" Grid.ColumnSpan="2">
+                    <Slider x:ConnectionId='39' x:Name="slider2" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="107"
+                    Minimum="1" Maximum="8" StepFrequency="1" Margin="0,-6,0,0"/>
+                    <TextBlock x:ConnectionId='40'                                                 HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,6,4,0"/>
+                    <Button x:ConnectionId='41' x:Name="ReserveButton2" Content="Reserve" Height="32" Margin="0,91,0,0" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.345,1.276" HorizontalAlignment="Center"                             />
+                </Grid>
+
+                <TextBlock HorizontalAlignment="Left" Height="24" Margin="211,150,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="129"/>
+                <TextBox x:ConnectionId='38' x:Name="EmailTextbox2" HorizontalAlignment="Left" Height="31" Margin="211,169,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="142" PlaceholderText="Enter Email" Grid.ColumnSpan="2"/>
+            </Grid>
+            <Grid x:ConnectionId='17' x:Name="MovieGrid3" HorizontalAlignment="Left" Height="379" Margin="783,0,0,0" VerticalAlignment="Top" Width="353">
+                <Image x:ConnectionId='18' x:Name="SamplePoster3" Source="/Assets/movieplaceholder3.jpg" HorizontalAlignment="Left" Height="214" Margin="10,32,0,0" VerticalAlignment="Top" Width="196"/>
+                <ComboBox x:ConnectionId='19' x:Name="showtimesComboBox3" Height="32" Margin="211,56,0,0" Width="142"                                                      />
+                <TextBlock x:ConnectionId='20' x:Name="MovieTitle3" HorizontalAlignment="Left" Margin="70,8,0,0" TextWrapping="Wrap" Text="Movie 3" VerticalAlignment="Top" FontWeight="Bold"/>
+                <TextBlock x:ConnectionId='21' x:Name="AmountOfTicketsTextbox3" HorizontalAlignment="Left" Height="24" Margin="214,93,0,0" TextWrapping="Wrap" Text="Amount of Tickets" VerticalAlignment="Top" Width="129"/>
+                <TextBlock x:ConnectionId='22' x:Name="ShowtimeTexblock3" HorizontalAlignment="Left" Height="24" Margin="214,32,0,0" TextWrapping="Wrap" Text="Showtimes" VerticalAlignment="Top" Width="129"/>
+                <TextBlock x:ConnectionId='23' x:Name="SampleText3" HorizontalAlignment="Left" Margin="9,251,0,0" TextWrapping="Wrap" Text="Movie Sample Text - Lorem ipsum dolor sit amet. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" VerticalAlignment="Top" Height="129" Width="319"/>
+                <TextBlock x:ConnectionId='24' x:Name="TicketMaxTextblock3" HorizontalAlignment="Left" Height="19" Margin="214,142,0,0" TextWrapping="Wrap" Text="*8 Ticket Max Per Reservation" VerticalAlignment="Top" Width="120" FontStyle="Italic" FontSize="6"/>
+
+                <!-- Slider and associated elements -->
+                <Grid x:ConnectionId='25' x:Name="SliderGrid3" Margin="214,115,0,0">
+                    <Slider x:ConnectionId='28' x:Name="slider3" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="107"
+                    Minimum="1" Maximum="8" StepFrequency="1" Margin="0,-6,0,0"/>
+                    <TextBlock x:ConnectionId='29'                                                 HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,6,4,0"/>
+                    <Button x:ConnectionId='30' x:Name="ReserveButton3" Content="Reserve" Height="32" Margin="0,91,0,0" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.345,1.276" HorizontalAlignment="Center"                             />
+                </Grid>
+
+                <TextBlock x:ConnectionId='26' x:Name="EmailLabel3" HorizontalAlignment="Left" Height="24" Margin="211,150,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="129"/>
+                <TextBox x:ConnectionId='27' x:Name="EmailTextbox3" HorizontalAlignment="Left" Height="31" Margin="211,169,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="142" PlaceholderText="Enter Email"/>
+            </Grid>
+        </Grid>
+        <Button x:ConnectionId='7' x:Name="LoginButton" Content="Login" Margin="1146,41,0,0" VerticalAlignment="Top" Width="69" Background="#000044" Foreground="#FFD700"                          />
+        <Grid x:ConnectionId='8' x:Name="PriceGrid" Margin="666,125,65,511">
+            <Image x:ConnectionId='11' x:Name="StarImage" Source="/Assets/star1.png" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="59" Margin="23,7,0,0"/>
+            <TextBlock x:ConnectionId='12' x:Name="PriceTextBlock" HorizontalAlignment="Left" Margin="74,10,0,0" TextWrapping="Wrap" Text="$10/ticket - Regular Price" VerticalAlignment="Top" FontSize="20" FontFamily="Segoe UI Semibold" Foreground="#FFD700"                                                   />
+            <TextBlock x:ConnectionId='13' x:Name="PriceTextBlock_Copy" HorizontalAlignment="Left" Margin="74,42,0,0" TextWrapping="Wrap" Text="$5/ticket - Member Price" VerticalAlignment="Top" FontSize="20" FontFamily="Segoe UI Semibold" Foreground="#FFD700"                                                   />
+            <Image x:ConnectionId='14' x:Name="StarImage_Copy" Source="/Assets/star1.png" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="59" Margin="23,38,0,0"/>
+        </Grid>
+        <Grid x:ConnectionId='9' x:Name="TicketViewGrid" Margin="44,594,44,19">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="273*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:ConnectionId='10' Foreground="#FFD700" x:Name="TicketViewTextblock" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="Login to view tickets" VerticalAlignment="Top" Height="18" Width="126" FontStyle="Italic" Grid.ColumnSpan="2">
+                <TextBlock.FocusVisualPrimaryBrush>
+                    <AcrylicBrush/>
+                </TextBlock.FocusVisualPrimaryBrush>
+            </TextBlock>
+        </Grid>
+    </Grid>
+</Page>
+
